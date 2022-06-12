@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<p>As pessoas deveriam poder participar mais ativamente na polítiva, mas por diversos motivos isso não acontece. Nessas eleições indico que pesquise sobre quem vai receber seu voto.</p>
+
+<p>Veja se você tem a idade mínima para votar:</p>
+
+<p>Qual a sua idade?</p>
+
+<input type="text">
+
+<p></p>
+
+<button type="button" onclick='verifica()' >Envie sua resposta</button>
+
+<script type="text/javascript">
+	
+	var idadeValida = 16;
+
+	var input = document.querySelector ("input");
+	input.focus();
+
+
+
+	function verifica (){
+		if (input.value >= idadeValida){
+			alert ("Você pode votar! Exerça seu direito como eleitor.");
+		} else {
+			alert ("Quando fizer 16 anos você poderá votar <3");
+		}
+		input.value = "";
+		input.focus();
+	}
+	var button = document.querySelector("button");
+
+
+</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+	
+	var arrozTipo1 = [7.50, 0, 0];
+	var arrozTipo2 = [6.50, 0, 0];
+	var feijaoPreto = [5.50, 0];
+	var feijaoBranco = [4.50, 0];
+	var lentilha = [3.50,0];
+	var linguicaDefumada = [9.50, 0];
+	var carrinho;
+
+	arrozTipo1 [2] = prompt ("Possui arroz tipo 1?");
+
+	if (arrozTipo1 [2] == "sim" | arrozTipo1 [2] == "SIM" | arrozTipo1 [2] == "s" | arrozTipo1 [2] == "Sim"){
+		
+		alert ("Acrescentado ao carrinho 1kg de arroz tipo 1. Preço: R$ " + arrozTipo1 [0]);
+		arrozTipo1 [1] = 1;
+
+		alert ("Acrescentado ao carrinho 2kg de feijões pretos. Preço unidade: R$ " + feijaoPreto [0]);
+		feijaoPreto [1] = 2;
+
+		carrinho = arrozTipo1 [0] + (feijaoPreto [0] *feijaoPreto [1]);
+
+		alert ("O valor total do carrinho de compras é de R$ " + carrinho);
+	} else if (arrozTipo1 [2] == "não" | arrozTipo1 [2] == "nao" | arrozTipo1 [2] == "n" | arrozTipo1 [2] == "Não") {
+
+		arrozTipo2 [2] = prompt ("Possui arroz tipo 2?");
+
+		if (arrozTipo2 [2] == "sim" | arrozTipo2 [2] == "SIM" | arrozTipo2 [2] == "s" | arrozTipo2 [2] == "Sim"){
+
+			alert ("Acrescentado ao carrinho 3kg de arroz tipo 2. Preço unidade: R$ " + arrozTipo2 [0]);
+
+		arrozTipo2 [1] = 3;
+
+		alert ("Acrescentado ao carrinho 1kg de feijão branco. Preço: R$ " + feijaoBranco [0]);
+
+		feijaoBranco [1] = 1;
+
+		carrinho =  feijaoBranco [0] +(arrozTipo2 [0] * arrozTipo2 [1]);
+
+		alert ("O valor total do carrinho de compras é de R$ " + carrinho);
+
+		} else if (arrozTipo2 [2] == "não" | arrozTipo2 [2] == "nao" | arrozTipo2 [2] == "n" | arrozTipo2 [2] == "Não") {
+			
+			alert ("Acrescentado ao carrinho 2kg de lentilha. Preço unidade: R$ " + lentilha [0]);
+		lentilha [1] = 2;
+
+		alert ("Acrescentado ao carrinho 1kg de linguiça defumada. Preço: R$ " + linguicaDefumada [0]);
+		linguicaDefumada [1] = 1;
+
+		carrinho = lentilha [0] + linguicaDefumada [0];
+
+		alert ("O valor total do carrinho de compras é de R$ " + carrinho);		
+		} else {
+			alert ("A informação inserida não condiz com 'sim' ou 'não'. Como é um if aninhado, recarregue a página e tente novamente")
+		}
+
+	} else {
+		alert ("A informação inserida não condiz com 'sim' ou 'não'. Como é um if aninhado, recarregue a página e tente novamente")
+	}
+</script>
+</html>

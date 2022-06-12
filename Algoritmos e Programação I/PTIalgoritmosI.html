@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+	var precoGasolina;
+	var precoAlcool;
+	var valor;
+	var pergunta;
+	var cont = false;
+	var retorno;
+	
+	while (cont == false) {
+
+		precoGasolina = prompt ("Digite o preço do litro da gasolina");
+		precoGasolina = parseInt (precoGasolina);
+		precoAlcool = prompt ("Digite o preço do litro da alcool");
+		precoAlcool = parseInt (precoAlcool);
+
+		valor = precoAlcool/precoGasolina;
+
+		if (valor > 0.7){
+			alert ("vale a pena a gasolina");
+		} else if (valor < 0.7 ) { 
+			alert ("vale a pena o álcool");
+		} else {
+			alert ("tanto faz abastecer com um ou outro");
+		}
+
+		retorno = 0;
+				
+		while(retorno == 0){
+
+			pergunta = prompt ("Você deseja efetuar uma nova consulta?");
+			
+			if (pergunta == "sim"){
+				cont = false;
+				retorno = retorno + 1;
+			}else if(pergunta == "não" || pergunta == "nao"){
+				cont = true;
+				retorno = retorno + 1;
+			}else{
+				alert("Por favor responda sim ou não");
+			}
+		}
+	}
+
+</script>
+</html>

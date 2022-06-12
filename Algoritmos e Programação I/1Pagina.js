@@ -1,1 +1,0 @@
-alert ("Primeiro exercício da matéria. Olá Mundo!");
