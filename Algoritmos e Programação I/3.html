@@ -3,19 +3,44 @@
 	<meta charset="utf-8">
 	<script type="text/javascript">
 
-	var idade, cont  = 1;
-	
-	idade = prompt ("Insira sua idade");
+		// Estrutura de repetição/laço/looping Composta, com while aninhado //
 
-	while (idade < 0 && cont < 3){
-		idade = prompt  ("Idade inválida. Insira novamente");
-		cont++;  // cont++ é o mesmo que cont = cont + 1
-	}
-	if (cont < 3) {
-		alert ("Sua idade é" + idade);
-	}else{
-		alert ("Você excedeu o número de tentativas");
-	}    
-		
+		var idade, tentativas, cont = 0, teste = true;
+
+		while (cont < 3) {
+
+			idade = prompt ("Insira sua idade");
+			cont++;
+
+			while (idade < 0 | idade > 120 && cont < 3){
+				idade = prompt ("Insira sua idade (tente com números entre 1 e 120). Você só tem 3 tentativas ao todo");
+				cont++;
+				}
+
+			while (idade > 0 && idade < 120) {
+				alert ("Sua idade é " + idade);
+
+				tentativas = prompt ("Quer tentar novamente?");
+				idade = 0;
+
+				while (tentativas != "nao" && tentativas != "não" && tentativas != "n" && tentativas != "NAO" && tentativas != "sim" && tentativas != "SIM" && tentativas != "s" && tentativas != "Sim") {
+					tentativas = prompt ("Quer tentar novamente? Tente com sim ou não");
+				}
+
+				if (tentativas == "sim" | tentativas == "SIM" | tentativas == "s" | tentativas == "Sim"){
+				cont = 0;
+				tentativas = 0;
+				}
+				if (tentativas == "nao" | tentativas == "não" | tentativas == "n" | tentativas == "NAO"){
+					alert ("Obrigada por participar");
+					cont = 4;
+					tentativas = 0;
+				}	
+			}		
+			while (cont == 3){
+				alert ("Você excedeu o número de tentativas");
+				cont = 4;
+			}	
+		}		
 	</script>
 </html>
