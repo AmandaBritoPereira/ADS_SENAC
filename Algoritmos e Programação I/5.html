@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<script type="text/javascript">
+	// Estrutura de repetição/laço/looping Composto com while && Simples com for//
+	//Estrutura de Decisão (Condicional) Simples com if//
+
+	var senha1 = 0;
+	var senha2;
+	var algoritmo = true;
+
+	alert ("Sua nova conta já está quase ativada, só falta uma senha ...");
+
+	while (algoritmo==true){
+		while (senha1.length!=6){
+			senha1 = prompt("Insira uma senha nova com 6 dígitos"); 
+			var cont = 3;
+		}
+
+		for(cont; senha1.length == 6 && cont > 0 ; cont--){
+			
+			senha2 = prompt ("Confirme sua senha de 6 dígitos");
+
+			if (senha2 == senha1){
+				alert ("Obrigada, sua nova senha está salva!");
+				cont = 0;
+				algoritmo = false;
+			}
+			if (cont == 1){
+				alert("A segunda senha não foi compatível, então vamos começar denovo?")
+				senha1 = 0;
+				senha2 = 0;
+			}	
+		}
+	}
+
+</script>
+</html>
